@@ -1,15 +1,8 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import Mainnav from './Src2/Navigation/MainNav'
-import GlobalBackground from './Src2/Components/BackgroundView'
-import { Loginform } from './Src2/Screens/Login'
-
+import {View, Text} from 'react-native';
+import React from 'react';
+import MainNav from './src/Navigation/MainNav';
 const App = () => {
-  return (
-    // <Loginform/>
-   <Mainnav/>
-  // <GlobalBackground/>
-  )
-}
+  return <MainNav />;
+};
 
-export default App
+export default App;

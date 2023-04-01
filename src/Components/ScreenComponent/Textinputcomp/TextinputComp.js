@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, TextInput } from 'react-native';
+import { styles } from './style';
 
 export const Textinputcomp = ( props) => {
     const {placeholder,label}=props
@@ -18,19 +19,3 @@ export const Textinputcomp = ( props) => {
     )
 }
 
-const styles = StyleSheet.create({
-    Text: {
-        fontWeight: 'bold'
-    },
-    Textinput: {
-        borderWidth: 1,
-        borderColor: '#1b1b33',
-        height: 35,
-        borderRadius: 8,
-        fontsize: 16,
-        paddingLeft: 10,
-        marginBottom: 20,
-    },
-
-
-})

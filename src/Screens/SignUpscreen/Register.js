@@ -1,25 +1,16 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Dimensions,
-  ImageBackground,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
-import {Button} from '../Components/ButtonComp';
+import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
-
-import {Formcontainer} from '../Components/FormContainer';
-import {Submmitbtn} from '../Components/SubmitButton';
-import {Textinputcomp} from '../Components/TextinputComp';
-import {isValidemail, isValidobjfield, updateError} from '../utils/method';
-import {hp, wp} from '../Constants/Dimension';
-import {auth} from '../Constants/Database';
 import {createUserWithEmailAndPassword} from 'firebase/auth';
-import GlobalBackground from '../Components/BackgroundView';
 import {useNavigation} from '@react-navigation/native';
+import {Button} from '../../Components/ScreenComponent/ButtonCompont/ButtonComp';
+import GlobalBackground from '../../Components/ScreenComponent/BackgroundView/BackgroundView';
+import {Formcontainer} from '../../Components/ScreenComponent/Formcontainer/FormContainer';
+import {Textinputcomp} from '../../Components/ScreenComponent/Textinputcomp/TextinputComp';
+import {auth} from '../../Constants/Database';
+import {isValidemail, isValidobjfield, updateError} from '../../utils/method';
+import {Colorss} from '../../Constants/Color';
+import {styles} from './styles';
 
 export const Registerform = () => {
   const navigation = useNavigation();
@@ -88,9 +79,9 @@ export const Registerform = () => {
     // }
     handleSignUp();
   };
-  const onLogin=()=>{
+  const onLogin = () => {
     navigation.navigate('Login');
-  }
+  };
   return (
     <GlobalBackground
       haswhitebackground
@@ -128,9 +119,9 @@ export const Registerform = () => {
               style={styles.visibilityBtn}
               onPress={managePasswordVisibility}>
               {hidePassword ? (
-                <Icon name="eye-with-line" size={25} color="grey" />
+                <Icon name="eye-with-line" size={25} color={Colorss.grey} />
               ) : (
-                <Icon name="eye" size={25} color="grey" />
+                <Icon name="eye" size={25} color={Colorss.grey} />
               )}
             </TouchableOpacity>
           </View>
@@ -150,9 +141,9 @@ export const Registerform = () => {
               style={styles.visibilityBtn}
               onPress={manageconfirmPasswordVisibility}>
               {hideconfirmPassword ? (
-                <Icon name="eye-with-line" size={25} color="grey" />
+                <Icon name="eye-with-line" size={25} color={Colorss.grey} />
               ) : (
-                <Icon name="eye" size={25} color="grey" />
+                <Icon name="eye" size={25} color={Colorss.grey} />
               )}
             </TouchableOpacity>
           </View>
@@ -161,63 +152,9 @@ export const Registerform = () => {
             btnName="Log In"
             onPress={onLogin}
             btnStyle={styles.btnStyle}
-            textcolor="#1E90FF"
+            textcolor={Colorss.ButtonColor}
           />
         </Formcontainer>
       }></GlobalBackground>
   );
 };
-
-const styles = StyleSheet.create({
-  Text: {
-    fontSize: 50,
-
-    fontWeight: 'bold',
-  },
-  btnStyle: {
-    paddingTop: hp('7%'),
-    backgroundColor: 'white',
-  },
-  // SignupStyle:{
-  //   // width:wp("40%" ),
-  //   paddingTop:60,
-  //   backgroundColor:'white'
-
-  // },
-  Text: {
-    fontWeight: 'bold',
-    color: 'black',
-  },
-  Textinput: {
-    borderWidth: wp('0.3%'),
-    borderColor: 'lightgrey',
-    color: 'black',
-    height: hp('5%'),
-    borderRadius: wp('3%'),
-    fontsize: hp('5%'),
-    paddingLeft: wp('3%'),
-    marginBottom: hp('4%'),
-  },
-
-  visibilityBtn: {
-    position: 'absolute',
-    right: wp('2%'),
-    height: hp('4%'),
-    width: wp('7%'),
-    marginTop: hp('3%'),
-  },
-  ErrorText: {
-    color: 'red',
-    fontSize: 18,
-    textAlign: 'center',
-  },
-
-  SignupText: {
-    color: 'black',
-    fontWeight: 'bold',
-    fontSize: hp('3.5%'),
-  },
-  MainView: {
-    marginVertical: hp('4.5%'),
-  },
-});

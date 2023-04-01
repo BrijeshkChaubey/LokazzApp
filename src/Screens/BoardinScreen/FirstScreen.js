@@ -1,9 +1,11 @@
 import React from 'react';
 import {View, Text, ImageBackground, Image, StyleSheet} from 'react-native';
-import {Button} from '../Components/ButtonComp';
 import {getText} from '../Constants/Text';
-import GlobalBackground from '../Components/BackgroundView';
-import {hp, wp} from '../Constants/Dimension';
+import {Button} from '../../Components/ScreenComponent/ButtonCompont/ButtonComp';
+import {hp, wp} from '../../Constants/Dimension';
+import GlobalBackground from '../../Components/ScreenComponent/BackgroundView/BackgroundView';
+import { texts } from '../../Constants/Text';
+import { styles } from './styles';
 
 export const FirstScreen = ({navigation}) => {
   const OnSignup = () => {
@@ -24,10 +26,10 @@ export const FirstScreen = ({navigation}) => {
                 }}
                 style={styles.image}
               />
-              <Text style={styles.rightjoyText}>{getText.RIGHTJOY}</Text>
+              <Text style={styles.rightjoyText}>{texts.RIGHTJOY}</Text>
             </View>
-            <Text style={styles.text}>{getText.ALL_SERVICE_ON}</Text>
-            <Text style={styles.text}>{getText.YOUR_FINGERTIPS}</Text>
+            <Text style={styles.text}>{texts.ALL_SERVICE_ON}</Text>
+            <Text style={styles.text}>{texts.YOUR_FINGERTIPS}</Text>
           </View>
 
           <View style={styles.ButtonView}>
@@ -47,48 +49,4 @@ export const FirstScreen = ({navigation}) => {
     />
   );
 };
-const styles = StyleSheet.create({
-  innerView: {
-    marginHorizontal: wp('5.2%'),
-  },
-  imageView: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: hp('55%'),
-    marginBottom: hp('3%'),
-  },
-  image: {
-    width: wp('8%'),
-    height: hp('4.5%'),
-    marginRight: wp('3%'),
-  },
-  rightjoyText: {
-    color: 'white',
-    fontSize: hp('3.4%'),
-    fontWeight: 'bold',
-  },
-  text: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: hp('4.7%'),
-  },
-  ButtonView: {
-    marginHorizontal: wp('4%'),
-    marginTop: hp('5.4%'),
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  btnStyle1: {
-    backgroundColor: '#1E90FF',
-    width: wp('40%'),
-    marginRight: wp('5%'),
-    height: hp('6.5%'),
-    borderRadius: wp('4%'),
-  },
-  btnStyle2: {
-    backgroundColor: 'lightgray',
-    width: wp('40%'),
-    height: hp('6.5%'),
-    borderRadius: wp('4%'),
-  },
-});
+

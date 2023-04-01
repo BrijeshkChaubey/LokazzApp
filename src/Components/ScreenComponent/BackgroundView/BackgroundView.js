@@ -1,7 +1,8 @@
 import React, {Children} from 'react';
 import {ImageBackground, View, Text, Image, StyleSheet} from 'react-native';
-import {hp, wp} from '../Constants/Dimension';
-import {getText} from '../Constants/Text';
+import { texts } from '../../../Constants/Text';
+import { styles } from './styles';
+
 const GlobalBackground = props => {
   return (
     <ImageBackground
@@ -19,7 +20,7 @@ const GlobalBackground = props => {
               }}
               style={styles.image}
             />
-            <Text style={styles.rightjoy}>{getText.RIGHTJOY}</Text>
+            <Text style={styles.rightjoy}>{texts.RIGHTJOY}</Text>
           </View>
 
           <View style={styles.Modallook}>{props.hastextinput}</View>
@@ -30,29 +31,5 @@ const GlobalBackground = props => {
     </ImageBackground>
   );
 };
-const styles = StyleSheet.create({
-  imageView: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginBottom: hp('4%'),
-    paddingTop: hp('12%'),
-  },
-  image: {
-    width: wp('8%'),
-    height: hp('4.5%'),
-    marginRight: wp('3%'),
-    marginLeft: wp('4.5%'),
-  },
-  rightjoy: {
-    color: 'white',
-    fontSize: hp('3.2%'),
-    fontWeight: 'bold',
-  },
-  Modallook: {
-    height: hp('80%'),
-    backgroundColor: 'white',
-    borderTopLeftRadius: wp('13%'),
-    borderTopRightRadius: wp('13%'),
-  },
-});
+
 export default GlobalBackground;

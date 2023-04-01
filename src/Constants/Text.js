@@ -7,4 +7,8 @@ export const texts = {
   Our_Best_Services: 'Our Best Services',
   Starting_at: 'Starting at',
   Dollar: '$',
+  RIGHTJOY: 'RightJoy',
+  ALL_SERVICE_ON: 'All services on',
+  YOUR_FINGERTIPS: 'your fingertips.'
 };
+

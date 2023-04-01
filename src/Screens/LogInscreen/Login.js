@@ -10,16 +10,17 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import {isValidemail, isValidobjfield, updateError} from '../utils/method';
-import {Textinputcomp} from '../Components/TextinputComp';
-import {Formcontainer} from '../Components/FormContainer';
-import {Button} from '../Components/ButtonComp';
-import {hp, wp} from '../Constants/Dimension';
 import Icon from 'react-native-vector-icons/Entypo';
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import {useNavigation} from '@react-navigation/native';
-import GlobalBackground from '../Components/BackgroundView';
-import {auth} from '../Constants/Database';
+import { Textinputcomp } from '../../Components/ScreenComponent/Textinputcomp/TextinputComp';
+import { Formcontainer } from '../../Components/ScreenComponent/Formcontainer/FormContainer';
+import { Button } from '../../Components/ScreenComponent/ButtonCompont/ButtonComp';
+import GlobalBackground from '../../Components/ScreenComponent/BackgroundView/BackgroundView';
+import { auth } from '../../Constants/Database';
+import { isValidemail, isValidobjfield, updateError } from '../../utils/method';
+import { styles } from './styles';
+import { Colorss } from '../../Constants/Color';
 
 export const Loginform = () => {
   const navigation = useNavigation();
@@ -108,9 +109,9 @@ export const Loginform = () => {
               style={styles.visibilityBtn}
               onPress={managePasswordVisibility}>
               {hidePassword ? (
-                <Icon name="eye-with-line" size={25} color="grey" />
+                <Icon name="eye-with-line" size={25} color={Colorss.grey} />
               ) : (
-                <Icon name="eye" size={25} color="grey" />
+                <Icon name="eye" size={25} color={Colorss.grey} />
               )}
             </TouchableOpacity>
           </View>
@@ -119,56 +120,17 @@ export const Loginform = () => {
           <Button
             btnName="Forget Password ?"
             btnStyle={styles.SignupStyle}
-            textcolor="grey"
+            textcolor={Colorss.grey}
           />
           <Button
             btnName="Sign Up"
             onPress={OnSignup}
             btnStyle={styles.SignupStyle}
-            textcolor="#1E90FF"
+            textcolor={Colorss.ButtonColor}
           />
         </Formcontainer>
       }></GlobalBackground>
   );
 };
 
-const styles = StyleSheet.create({
-  SignupStyle: {
-    paddingTop: hp('7%'),
-    backgroundColor: 'white',
-  },
-  Text: {
-    fontWeight: 'bold',
-    color: 'black',
-  },
-  Textinput: {
-    borderWidth: wp('0.3%'),
-    borderColor: 'lightgrey',
-    color: 'black',
-    height: hp('5%'),
-    borderRadius: wp('3%'),
-    fontsize: hp('5%'),
-    paddingLeft: wp('3%'),
-    marginBottom: hp('4.5%'),
-  },
-  visibilityBtn: {
-    position: 'absolute',
-    right: wp('2%'),
-    height: hp('4%'),
-    width: wp('7%'),
-    marginTop: hp('3%'),
-  },
-  ErrorText: {
-    color: 'red',
-    fontSize: 18,
-    textAlign: 'center',
-  },
-  LogText: {
-    color: 'black',
-    fontWeight: 'bold',
-    fontSize: hp('3.5%'),
-  },
-  MainView: {
-    marginVertical: hp('4.5%'),
-  },
-});
+

@@ -10,4 +10,5 @@ export const Colorss = {
   grey: 'grey',
   light_grey: 'lightgrey',
   Light_Blue: '#0096ff',
+  ButtonColor:'#1E90FF'
 };
