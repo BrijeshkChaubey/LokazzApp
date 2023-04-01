@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, TextInput } from 'react-native';
-import { hp, wp } from '../Constants/Dimension';
 
 export const Textinputcomp = ( props) => {
     const {placeholder,label}=props
@@ -21,19 +20,17 @@ export const Textinputcomp = ( props) => {
 
 const styles = StyleSheet.create({
     Text: {
-        fontWeight: 'bold',
-        color:'black'
+        fontWeight: 'bold'
     },
     Textinput: {
-        borderWidth: wp("0.3%"),
-        borderColor: 'lightgrey',
-        color: 'black',
-        height: hp("5%"),
-        borderRadius: wp('3%'),
-        fontsize: hp('5%'),
-        paddingLeft: wp('3%'),
-        marginBottom: hp('4%'),
-      },
+        borderWidth: 1,
+        borderColor: '#1b1b33',
+        height: 35,
+        borderRadius: 8,
+        fontsize: 16,
+        paddingLeft: 10,
+        marginBottom: 20,
+    },
 
 
 })

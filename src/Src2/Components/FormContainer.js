@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
-import { wp } from '../Constants/Dimension';
 
 export const Formcontainer = ({ children }) => {
     return (
@@ -15,9 +14,9 @@ export const Formcontainer = ({ children }) => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: wp('4%'),
+        paddingHorizontal: 20,
 
-        // width: Dimensions.get('window').width
+        width: Dimensions.get('window').width
     },
 
 
