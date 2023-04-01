@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1015853869067",
+    "project_id": "lookazapp",
+    "storage_bucket": "lookazapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015853869067:android:e5c0e435395dcf0fe7ff0e",
+        "android_client_info": {
+          "package_name": "com.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015853869067-ptfaj4ppiu4rigf8k6b9bkq1t19p6j7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbTsN4byLSUSTmOthK-GHyzT5Slscr0kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015853869067-ptfaj4ppiu4rigf8k6b9bkq1t19p6j7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
