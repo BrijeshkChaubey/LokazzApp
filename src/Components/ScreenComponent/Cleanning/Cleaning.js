@@ -4,14 +4,16 @@ import Cleaningdata from '../../../Assets/Datas/Cleaningdata';
 import {styles} from './styles';
 import {texts} from '../../../Constants/Text';
 import Cleaningcard from '../../CardComp/Cleaningcard/Cleaningcard';
+import { useNavigation } from '@react-navigation/native';
 
 const Cleaning = () => {
+  const navigation=useNavigation()
   const Data = Cleaningdata;
   return (
     <View style={styles.Externalroot}>
       <View style={styles.Mainroot}>
         <Text style={styles.root}>{`${texts.Cleaning_pest}`}</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Cleanin & cONTROL')}>
           <Text style={styles.Viewtext}>{`${texts.View_text}`}</Text>
         </TouchableOpacity>
       </View>
